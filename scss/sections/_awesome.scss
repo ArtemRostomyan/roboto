@@ -1,0 +1,33 @@
+.awesome{
+   background-color: $blue;
+   min-height: 100%;
+   &--title{
+      color: rgba(#fff, 0.18);
+   }
+   &--subtitle{
+      color: #fff;
+   }
+   &__circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      background-color: #2e85aa;
+   }
+   &__icon{
+      width: 34px;
+      height: 34px;
+   }
+   & .info-box{
+      & .title{
+         color: #fff;
+      }
+      & .subtitle{
+         color: #fff;
+         margin-bottom: 140px;
+      }
+      
+   }
+}

@@ -1,0 +1,44 @@
+.team{
+   min-height: 100%;
+   .sub-text{
+      margin-bottom: 0px;
+   }
+   & .info-box{
+      & .title{
+         color: rgba($black, 0.18);
+      }
+      & .subtitle{
+         color: $black
+      }
+   }
+}
+.team-participant{
+   position: relative;
+   margin-bottom: 85px;
+   &__info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100px;
+      width: 215px;
+      background-color: #fff;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translate(-50%,0);
+   }
+   &__name{
+      font-family: Gotham;
+      font-weight: 500;
+      color: $blue;
+      font-size: 20px;
+   }
+   &__position{
+      margin-top: 15px;
+      font-family: Gotham;
+      font-weight: 500;
+      color: #000;
+   }
+}

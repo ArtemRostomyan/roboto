@@ -1,0 +1,142 @@
+.header {
+
+   // .header__hero
+
+   &__hero {
+      border-bottom: 1px solid rgba(#fff, 0.2) ;
+   }
+   &__inner{
+      height: 115px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   // .header__logo
+
+   &__logo {
+      z-index: 3;
+   }
+
+   // .header__logo-icon
+
+   &__logo-icon {
+   }
+
+   // .header__links-box
+
+   &__links-box {
+      display: flex;
+      position: relative;;
+      z-index: 2;
+   }
+
+   // .header__links
+
+   &__links {
+      @include adaptiv-font(20, 14, 24);
+      &:not(:last-child){
+         margin-right: 35px;
+      }
+   }
+
+   // .header__link
+
+   &__link {
+      transition: all 3s ease;
+      position: relative;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+      font-family: Myriad;
+      color: #fff;
+      font-weight: 400;
+      &::before{
+         content: '';
+         height: 5px;
+         width: 100%;
+         transition: 0.3s;
+         bottom: 0;
+         left: 0;
+         border-radius: 5px;
+         box-shadow: 0 0 10px 0 rgb(28, 154, 228);
+         background-color: rgba($blue, 0.4);
+         position: absolute;
+         transform: scaleX(0);
+      }
+      &:hover{
+         color: $blue;
+         animation: shadow-link 2s ease 0.3s 1 normal forwards;
+         &::before{
+            animation: shadow-link 2s ease 0.3s infinite normal ;
+            transform: scaleX(1);
+         }
+      }
+   }
+
+   // .header__social
+
+   &__social {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .header__social-icon
+   &__social-link{
+      height: 22px;
+      width: 13px;
+      &:not(:last-child){
+        margin-right: 27px;
+      }
+   }
+   &__social-icon {
+      height: 20px;
+      width: 12px;
+      &:hover{
+         height: 22px;
+         width: 13px;
+      }
+   }
+
+   // .header__social-facebook
+
+   &__social-facebook {
+   }
+
+   // .header__social-twiter
+
+   &__social-twiter {
+   }
+
+   // .header__social-vk
+
+   &__social-vk {
+   }
+
+   // .header__social-instagram
+
+   &__social-instagram {
+   }
+}
+.container {
+}
+.menu {
+}
+@keyframes shadow-link {
+   0%{
+      box-shadow: 0 0 10px 0 rgb(28, 154, 228);
+   }
+
+   25%{
+      box-shadow: 0 -25px 35px 0px rgba(rgb(255, 255, 255), 1);
+   }
+   75%{
+      box-shadow: 0 -30px 35px 2px rgba($blue, 1);
+   }
+   100%{
+      box-shadow: 0 -30px 35px 2px rgba($blue, 1);
+   }
+}

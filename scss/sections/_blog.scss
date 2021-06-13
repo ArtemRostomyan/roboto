@@ -1,0 +1,21 @@
+.blog{
+   &--title{
+      color: rgba(#000, 0.18);
+   }
+   &--subtitle{
+      color: #000;
+   }
+   &__image{
+      width: 280px;
+      height: 270px;
+   }
+   & .info-box{
+      margin-bottom: 50px;
+      & .title{
+         color: $blue;
+      }
+      & .subtitle{
+         color: $black;
+      }
+   }
+}

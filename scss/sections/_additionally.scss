@@ -1,0 +1,30 @@
+.additionally{
+   
+   background-color: $blue;
+   background: url(../images/cod.jpg) center center no-repeat ;
+   background-attachment: fixed;
+   background-size: cover;
+   &-container{
+      
+      min-height: 460px;
+      display: flex;
+      align-items: center;
+   }
+   &__content{
+      width: 50%;
+      display: flex;
+      align-items: center;
+   }
+   &__image{
+      width: 70px;
+      height: 70px;
+      margin-right: 50px;
+      
+   }
+   &__text{
+      padding: 20px 0;
+      @include adaptiv-font(20, 15, 20);
+      color: rgb(255, 255, 255);
+      max-width: 450px;
+   }
+}

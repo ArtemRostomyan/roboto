@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'global';
+@import 'null';
+@import 'font';
+@import 'slick';
+@import 'map';
+
+//скролл-бар
+@import 'scrollbar';
+// секции
+@import 'sections/navbar';
+@import 'sections/header';
+@import 'sections/awesome';
+@import 'sections/akita';
+@import 'sections/blog';
+@import 'sections/additionally';
+@import 'sections/adaptiv-block';
+@import 'sections/team';
+@import 'sections/forms';
+@import 'sections/footer';
+
+
+@import 'media';

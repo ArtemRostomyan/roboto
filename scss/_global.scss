@@ -1,0 +1,126 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+///////////////////////////////////
+$blue: #11749e;
+$black: #222222;
+
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//<Шрифт по умолчанию>
+$fontFamily: "Gotham-Book";
+//</Шрифт по умолчанию>
+.title-box{
+	min-height: 310px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	& .title{
+		position: relative;
+		text-transform: uppercase;
+		font-family: Roboto;
+		font-weight: 700;
+		@include adaptiv-font(250, 200, 270);
+		transform: translate(0px, 120%);
+      opacity: 0;
+      transition: 0.8s ease;
+      &._active{
+         transform: translate(0px, 0px);
+         opacity: 1;
+      }
+		&>.subtitle{
+				width: max-content;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				font-family: Gotham;
+				font-weight: 500;
+				font-size: 38px;
+				transform: translate(-50%, 120%);
+				opacity: 0;
+				transition: 0.8s ease;
+				&._active{
+					transform: translate(-50%, -50%);
+					opacity: 1;
+				}
+				
+				}
+	}
+	
+}
+.info{
+   display: flex;
+   justify-content: space-between;
+}
+.info-box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   &:not(:last-child){
+     margin-right: 10px;
+	}
+	& .title{
+		font-size: 18px;
+      font-family: Gotham;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 25px 0;
+	}
+	& .subtitle{
+		font-size: 15px;
+		max-width: 260px;
+		line-height: 1.5;
+	}
+}
+.sub-text{
+	margin-top: -30px;
+	text-align: center;
+	@include adaptiv-font(30, 25 , 34);
+	color: $black;
+	margin-bottom: 80px;
+}
+.btn{
+	background-color: $blue;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-family: Gotham;
+	font-weight: 500;
+	padding: 20px 70px 30px 70px;
+	transition: 0.3s ease;
+	&:hover{
+		background-color: rgba($blue, 0.8);
+	}
+}
+
+
+.info{
+	& .info-box{
+		transform: translate(0px, 30%);
+      opacity: 0;
+		transition: 0.8s ease;
+		&._active{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+}
